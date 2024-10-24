@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce Method</title>
+</head>
+<body>
+    <h1>This si a sample program to demonstrate reduce() method...</h1>
+    <script>
+        let arr=[7,9,198,9,10,78];
+        /*
+        reduce() method takes 4 values(accumulator,element,index,array)
+        it takes default value as accumulator 
+        Syntax:
+        arr.reduce(function(accumulator,element,index,array){},accumulator as default value)
+        */
+        let res=arr.reduce(function(acc,ele,index,arr){
+            if(acc>ele){
+                return acc;
+            }else{
+                return ele;
+            }
+        },arr[0]);
+        console.log(res);
+    </script>
+</body>
+</html>

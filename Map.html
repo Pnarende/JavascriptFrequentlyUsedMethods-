@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map In JavaScript</title>
+</head>
+<body>
+    <h1>Map In JavaScript</h1>
+    <script>
+        //map() method return array of elements 
+        //to return the array of elements we prefer map() method ...
+        //map() method is a call back method it calls the method which has three parameters they are
+        //1. element, 2. index, 3. array
+        var birtYears=[2002,2000,2010,2015,2017,2020];
+        var res=birtYears.map(ageFind);
+        function ageFind(ele,index,arr){
+            var x=2024;
+            var result=x-ele;
+            return result;
+        }
+        console.table(birtYears);
+        console.log(res);
+    </script>
+</body>
+</html>

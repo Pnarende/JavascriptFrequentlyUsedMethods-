@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find Method</title>
+</head>
+<body>
+    <h1>program to demonstrate find() method</h1>
+    <script>
+        let arr=["Zahirabad","Hydernagar","Secundrabad","HayathNagar"];
+       var res=arr.find(function(ele){
+            return ele.startsWith("H");//returns Hydernagar and stop there it wont further iterate...
+        });
+        console.log(res);
+    </script>
+</body>
+</html>

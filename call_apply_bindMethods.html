@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three different Methods...</title>
+</head>
+<body>
+    <h1>Three different methods call(),apply(),bind()</h1>
+    <script>
+        
+        let myObj={
+            name:"Rahul",
+            salary:50000,
+            getSalary:function (){
+                console.log("My Salary is",this.salary)
+            },
+            greet:function (wish){
+                console.log(this.name,wish);
+            }
+        }
+        myObj.getSalary();
+        
+
+        var sal=7000;
+       
+        function getSalary(x,y){
+           console.log(this.sal,x,y) ; 
+           console.log(window.sal);
+          // console.log(sal) ; //2000
+        }
+        employee1={
+            sal:1000
+        }
+        employee2={
+            sal:2000
+        }
+        employee3={
+            name:"Narender",
+            sal:3000
+        }
+        // getSalary.call(employee1,10,10);//first call
+        // getSalary.apply(employee2,[20,20]);//second call
+    //    let res= getSalary.bind(employee3,30,30);
+    //    res();
+    var r=myObj.greet.bind(employee3);
+    r("Good AfterNoon");
+    r("Good Morning");
+    console.log(r);
+    </script>    
+</body>
+</html>
